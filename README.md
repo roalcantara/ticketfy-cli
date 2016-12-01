@@ -2,6 +2,8 @@
 
 Handy command line interface to [Ticketfy REST API](https://github.com/roalcantara/ticketfy-api)
 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -34,4 +36,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/roalca
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Ticketfy CLI is released under the [MIT License](http://opensource.org/licenses/MIT).

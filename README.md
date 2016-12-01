@@ -3,6 +3,7 @@
 Handy command line interface to [Ticketfy REST API](https://github.com/roalcantara/ticketfy-api)
 
 [![CircleCI](https://circleci.com/gh/roalcantara/ticketfy-cli.svg?style=shield)](https://circleci.com/gh/roalcantara/ticketfy-cli)
+[![Coverage Status](https://coveralls.io/repos/github/roalcantara/ticketfy-cli/badge.svg?branch=master)](https://coveralls.io/github/roalcantara/ticketfy-cli?branch=master)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 ## Installation

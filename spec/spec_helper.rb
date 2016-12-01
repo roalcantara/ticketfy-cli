@@ -9,6 +9,6 @@ if ENV['coverage'] == 'on'
     add_group 'lib', 'lib'
     minimum_coverage 100
   end
+  require 'coveralls'
+  Coveralls.wear!
 end
-
-require 'ticketfy/cli'

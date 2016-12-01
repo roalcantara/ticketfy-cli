@@ -12,3 +12,5 @@ if ENV['coverage'] == 'on'
   require 'coveralls'
   Coveralls.wear!
 end
+
+require 'ticketfy/cli'

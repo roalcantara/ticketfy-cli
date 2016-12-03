@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov',              '~> 0.12.0'
   spec.add_development_dependency 'rspec_junit_formatter',  '0.2.2'
   spec.add_development_dependency 'coveralls',              '0.8.15'
+
+  spec.add_runtime_dependency 'colorize',                   '~> 0.8.1'
 end

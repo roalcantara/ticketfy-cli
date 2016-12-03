@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'curb',                       '~> 0.9.3'
   spec.add_runtime_dependency 'thor',                       '~> 0.19.1'
   spec.add_runtime_dependency 'config',                     '~> 1.3'
+  spec.add_runtime_dependency 'json',                       '~> 2.0', '>= 2.0.2'
 end

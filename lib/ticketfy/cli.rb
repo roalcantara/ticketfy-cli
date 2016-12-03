@@ -1,6 +1,7 @@
 require 'curb'
 require 'byebug'
 require 'config'
+require 'json'
 
 require 'ticketfy/cli/version'
 require 'ticketfy/cli/util/credentials'

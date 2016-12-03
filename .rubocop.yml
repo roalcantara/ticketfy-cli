@@ -1,10 +1,3 @@
-# This is the default configuration file. Enabling and disabling is configured
-# in separate files. This file adds all other parameters apart from Enabled.
-
-inherit_from:
-  - config/rubocop/enabled.yml
-  - config/rubocop/disabled.yml
-
 # Common configuration.
 AllCops:
   # Include common Ruby source files.
@@ -399,6 +392,9 @@ Style/Copyright:
   Notice: '^Copyright (\(c\) )?2[0-9]{3} .+'
   AutocorrectNotice: ''
 
+Style/Documentation:
+  Enabled: false
+
 Style/DocumentationMethod:
   RequireForNonPublicMethods: false
 
@@ -526,6 +522,7 @@ Style/FrozenStringLiteralComment:
     # string literal. If you run code against multiple versions of Ruby, it is
     # possible that this will create errors in Ruby 2.3.0+.
     - always
+  Enabled: false
 
 # Built-in global variables are allowed by default.
 Style/GlobalVars:

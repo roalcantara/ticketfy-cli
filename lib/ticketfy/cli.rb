@@ -1,3 +1,5 @@
+require 'curb'
+
 require 'ticketfy/cli/version'
 require 'ticketfy/cli/util/credentials'
 require 'ticketfy/cli/util/logging'

@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls',              '0.8.15'
 
   spec.add_runtime_dependency 'colorize',                   '~> 0.8.1'
+  spec.add_runtime_dependency 'curb',                       '~> 0.9.3'
 end

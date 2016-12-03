@@ -35,3 +35,6 @@ bower.json
 
 # Ignore mscOS folders
 .DS_Store
+
+# Ignore config file
+.ticketfy.yml

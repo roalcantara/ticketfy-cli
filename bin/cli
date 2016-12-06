@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'thor'
+require 'ticketfy/cli'
+
+module Ticketfy
+  module CLI
+    class Auth < Thor
+      include Ticketfy::Cli::Util::Logging
+
+      class_option :verbose, type: :boolean
+      class_option :environment, default: :production
+
+      desc 'admin COMMAND', 'Admins authentication'
+      option :email, required: true
+      option :password, required: true
+      def admin
+        @verbose = options[:verbose]
+        auth = Ticketfy::Cli::Auth.new(environment: options[:environment], verbose: @verbose)
+        logged_in = auth.admin(email: options[:email], password: options[:password])
+        success "#{logged_in['data']['email']} signed in! YAY!"
+      rescue => e
+        error e: e
+      end
+
+      desc 'agent COMMAND', 'Agents authentication'
+      option :email, required: true
+      option :password, required: true
+      def agent
+        @verbose = options[:verbose]
+        auth = Ticketfy::Cli::Auth.new(environment: options[:environment], verbose: @verbose)
+        logged_in = auth.agent(email: options[:email], password: options[:password])
+        success "#{logged_in['data']['email']} signed in! YAY!"
+      rescue => e
+        error e: e, verbose: @verbose
+      end
+
+      desc 'customer COMMAND', 'Customers authentication'
+      option :email, required: true
+      option :password, required: true
+      def customer
+        @verbose = options[:verbose]
+        auth = Ticketfy::Cli::Auth.new(environment: options[:environment], verbose: @verbose)
+        logged_in = auth.customer(email: options[:email], password: options[:password])
+        success "#{logged_in['data']['email']} signed in! YAY!"
+      rescue => e
+        error e: e, verbose: @verbose
+      end
+    end
+
+    class Commands < Thor
+      include Ticketfy::Cli::Util::Logging
+
+      desc 'version', 'Display MyGem version'
+      map %w(-v --version) => :version
+      def version
+        success Ticketfy::Cli::VERSION
+      end
+
+      desc 'auth SUBCOMMAND ...ARGS', 'Authentication methods'
+      subcommand 'auth', Auth
+    end
+  end
+end
+
+Ticketfy::CLI::Commands.start(ARGV)

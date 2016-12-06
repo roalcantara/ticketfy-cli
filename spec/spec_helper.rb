@@ -2,6 +2,8 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 require 'rspec'
 require 'byebug'
+require 'colorize'
+require 'webmock/rspec'
 
 if ENV['coverage'] == 'on'
   require 'simplecov'
@@ -12,3 +14,5 @@ if ENV['coverage'] == 'on'
   require 'coveralls'
   Coveralls.wear!
 end
+
+require 'ticketfy/cli'
